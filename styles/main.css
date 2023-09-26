@@ -1,0 +1,113 @@
+/* COLORS */
+:root {
+  --color-primary: #0077B6;
+  --color-secondary: #4CAF50;
+
+  --color-aceent-1: #888888;
+  --color-aceent-2: #FFD700;
+
+  --color-white: #f7f7f7;
+  --color-dark: #333;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body,
+img {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+}
+
+.header__img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0;
+  animation: animate 20s infinite forwards;
+}
+
+.header__img--1 {
+  background: url(/assets/imgs/hero-bg-1.jpg);
+}
+
+.header__img--2 {
+  background: url(/assets/imgs/hero-bg-2.jpg);
+  animation-delay: 5s;
+}
+
+.header__img--3 {
+  background: url(/assets/imgs/hero-bg-3.jpg);
+  animation-delay: 10s;
+}
+
+
+/* Animation */
+@keyframes animate {
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
